@@ -41,6 +41,7 @@ public partial class Fans : System.Web.UI.Page
     protected void FollowArtistButton_Click(object sender, EventArgs e)
     {
         FollowThisArtist();
+        Fill_Following_Artists() 
     }
 
     protected void FollowThisArtist()
