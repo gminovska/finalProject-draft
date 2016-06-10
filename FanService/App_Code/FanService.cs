@@ -26,6 +26,18 @@ public class FanService : IFanService
         return artistNames;
     }
 
+    
+//added a method so the fans can see all the shows on a particular date
+    public List<MyShowDate> GetShowsByDate(DateTime date)
+    {
+        var shows = from s in db.Shows
+                    where s.ShowDate.Equals(date.Date)
+                    orderby s.ShowTime
+                    select new MyShowDate() { ShowTime = s.ShowTime, ShowName = s.ShowName, ShowTicketInfo = s.ShowTicketInfo };
+        
+        return shows.ToList();
+    }
+
 
     public List<string> GetShowNames()
     {
@@ -35,8 +47,6 @@ public class FanService : IFanService
         List<string> showNames = new List<string>();
         foreach (var s in shows)
         {
-
-
             showNames.Add(s.ShowName);
         }
         return showNames;
@@ -61,7 +71,7 @@ public class FanService : IFanService
         var spv = from v in db.Venues
                   from s in v.Shows
                   where s.Venue.VenueName.Equals(venue)
-                  select new { s.ShowName, s.ShowDate, s.ShowTime};
+                  select new { s.ShowName, s.ShowDate, s.ShowTime };
 
         List<ShowsPerVenue> VenueShows = new List<ShowsPerVenue>();
 
@@ -71,7 +81,7 @@ public class FanService : IFanService
             venueshows.VenueShowName = show.ShowName;
             venueshows.VenueShowDate = show.ShowDate.ToShortDateString();
             venueshows.VenueShowTime = show.ShowTime.ToString();
-            
+
 
             VenueShows.Add(venueshows);
         }
@@ -150,8 +160,8 @@ public class FanService : IFanService
         return result;
     }
 
-    
-   
+
+
 
     List<string> IFanService.GetFanArtists(int fanKey)
     {

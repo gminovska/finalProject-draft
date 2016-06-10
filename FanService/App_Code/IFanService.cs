@@ -35,8 +35,8 @@ public interface IFanService
 
     [OperationContract]
     List<string> GetFanArtists(int fanKey);
-
-
+    [OperationContract]
+    List<MyShowDate> GetShowsByDate(DateTime date);
 
 }
 
@@ -53,7 +53,7 @@ public class ShowsPerVenue
     [DataMember]
     public string VenueShowTime { set; get; }
 
-    
+
 }
 
 [DataContract]
@@ -82,4 +82,11 @@ public class ArtistNames
     public int ArtistKey { set; get; }
 
 
+}
+
+public class MyShowDate
+{
+    public string ShowName { get; set; }
+    public TimeSpan ShowTime { get; set; }
+    public string ShowTicketInfo { get; set; }
 }
