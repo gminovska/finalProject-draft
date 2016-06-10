@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3bdfd1a3-6e36-4af3-9778-798aff39ae5f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:29253/FanService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FanService.disco" MetadataType="Disco" ID="6d0e2fa7-ec5e-4207-9c72-a6d5433ba7bb" SourceId="1" SourceUrl="http://localhost:29253/FanService.svc?disco" />
+    <MetadataFile FileName="FanService.xsd" MetadataType="Schema" ID="b79d5a12-28a0-4546-9cb2-72619737641f" SourceId="1" SourceUrl="http://localhost:29253/FanService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FanService.wsdl" MetadataType="Wsdl" ID="b3f0115f-dafd-45e4-9cba-9e7df3a484be" SourceId="1" SourceUrl="http://localhost:29253/FanService.svc?wsdl" />
+    <MetadataFile FileName="FanService1.xsd" MetadataType="Schema" ID="3b9b3001-052a-4a7a-bc39-b467b6a3fe53" SourceId="1" SourceUrl="http://localhost:29253/FanService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FanService2.xsd" MetadataType="Schema" ID="6689b72d-b47b-49c9-a916-1c710bc11cff" SourceId="1" SourceUrl="http://localhost:29253/FanService.svc?xsd=xsd3" />
+    <MetadataFile FileName="FanService3.xsd" MetadataType="Schema" ID="4a28019a-9327-4396-b32a-6af586595291" SourceId="1" SourceUrl="http://localhost:29253/FanService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
